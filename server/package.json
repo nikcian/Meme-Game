@@ -1,22 +1,22 @@
 {
   "name": "server",
-  "version": "0.1.0",
-  "description": "",
-  "main": "index.mjs",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "version": "2.0.0",
+  "private": true,
+  "description": "API del Meme Game: Express 5, sessioni su SQLite (node:sqlite), partite gestite lato server.",
+  "type": "module",
+  "main": "src/index.mjs",
+  "engines": {
+    "node": ">=22.22.0"
   },
-  "author": "",
-  "license": "ISC",
+  "scripts": {
+    "dev": "node --watch --env-file-if-exists=.env src/index.mjs",
+    "start": "node --env-file-if-exists=.env src/index.mjs --production",
+    "test": "node --test --test-reporter=spec \"test/**/*.test.mjs\"",
+    "db:reset": "node --env-file-if-exists=.env src/db/reset.mjs"
+  },
   "dependencies": {
-    "cors": "^2.8.5",
-    "dayjs": "^1.11.11",
-    "express": "^4.19.2",
-    "express-session": "^1.18.0",
-    "express-validator": "^7.1.0",
-    "morgan": "^1.10.0",
-    "passport": "^0.7.0",
-    "passport-local": "^1.0.0",
-    "sqlite3": "^5.1.7"
+    "express": "5.3.0",
+    "express-session": "1.19.0",
+    "helmet": "8.3.0"
   }
 }

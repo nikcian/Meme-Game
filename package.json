@@ -1,0 +1,31 @@
+{
+  "name": "meme-game",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Abbina la didascalia giusta al meme prima che scada il tempo. React 19 + Express 5 + SQLite.",
+  "type": "module",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "engines": {
+    "node": ">=22.22.0"
+  },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "npm run build --workspace client",
+    "start": "npm start --workspace server",
+    "test": "npm test --workspace server",
+    "lint": "eslint .",
+    "check": "npm run lint && npm test && npm run build",
+    "db:reset": "npm run db:reset --workspace server",
+    "security": "npm audit && npm audit signatures"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "eslint": "10.15.0",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "eslint-plugin-react-refresh": "0.5.8",
+    "globals": "17.14.0"
+  }
+}

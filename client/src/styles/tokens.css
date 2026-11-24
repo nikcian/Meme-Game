@@ -1,0 +1,93 @@
+/* ==========================================================================
+   Design tokens — palette, forme, movimento. Tema chiaro "carta" e scuro "neon".
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+
+  --font-sans: 'Bricolage Grotesque Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-meme: Anton, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+  /* Colori del marchio: identici nei due temi. Il testo su questi colori è sempre --ink. */
+  --yellow: #ffd23f;
+  --pink: #ff5c8a;
+  --violet: #6a45ff;
+  --cyan: #2ed3c6;
+  --green: #19b46d;
+  --red: #d62f4b;
+  --orange: #ff9a3d;
+  --ink: #16131f;
+
+  /* Tema chiaro */
+  --bg: #fff6e5;
+  --bg-dot: rgb(22 19 31 / 0.085);
+  --surface: #ffffff;
+  --surface-2: #fffaf1;
+  --surface-3: #f6ebd6;
+  --text: #16131f;
+  --text-2: #4b4459;
+  --text-3: #655e73;
+  --line: #16131f;
+  --shadow-color: #16131f;
+  --hairline: rgb(22 19 31 / 0.12);
+  --focus: #6a45ff;
+  --chart-bar: #7b5cff;
+  --backdrop: rgb(22 19 31 / 0.55);
+
+  --success-bg: #d6f5e5;
+  --success-fg: #07673b;
+  --danger-bg: #ffe0e6;
+  --danger-fg: #a10f29;
+  --warning-bg: #ffead2;
+  --warning-fg: #874400;
+
+  /* Forme */
+  --bw: 3px;
+  --bw-sm: 2px;
+  --r-xs: 8px;
+  --r-sm: 10px;
+  --r: 14px;
+  --r-lg: 20px;
+  --r-pill: 999px;
+  --shadow-sm: 2px 2px 0 var(--shadow-color);
+  --shadow: 4px 4px 0 var(--shadow-color);
+  --shadow-lg: 6px 6px 0 var(--shadow-color);
+  --shadow-xl: 9px 9px 0 var(--shadow-color);
+
+  /* Movimento */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-fast: 130ms;
+  --dur: 220ms;
+  --dur-slow: 480ms;
+
+  /* Layout */
+  --container: 1180px;
+  --header-h: 72px;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --bg: #120f1a;
+  --bg-dot: rgb(255 255 255 / 0.055);
+  --surface: #1f1a2b;
+  --surface-2: #272035;
+  --surface-3: #171221;
+  --text: #f6f1ff;
+  --text-2: #cfc6e0;
+  --text-3: #aaa1bf;
+  --line: #ebe4fa;
+  --shadow-color: #7b5cff;
+  --hairline: rgb(255 255 255 / 0.12);
+  --focus: #b8a6ff;
+  --chart-bar: #8f75ff;
+  --backdrop: rgb(6 4 10 / 0.7);
+
+  --success-bg: #0f3424;
+  --success-fg: #93f2c3;
+  --danger-bg: #3f121c;
+  --danger-fg: #ffa6b6;
+  --warning-bg: #3c280d;
+  --warning-fg: #ffc888;
+}

@@ -1,8 +1,25 @@
-# dependencies
+# Dipendenze
 node_modules/
 
-# misc
+# Build del client
+client/dist/
+
+# Dati di runtime del server: database SQLite (con -wal/-shm) e segreto di sessione di sviluppo
+server/data/
+
+# Variabili d'ambiente (tieni solo l'esempio)
+.env
+.env.*
+!.env.example
+
+# Log
+*.log
+npm-debug.log*
+
+# Sistema operativo ed editor
 .DS_Store
 Thumbs.db
 Desktop.ini
-.vscode
+.vscode/*
+!.vscode/extensions.json
+.idea/

@@ -1,0 +1,22 @@
+version: 2
+updates:
+  # Aggiornamenti raggruppati e con "cooldown": nessuna PR per versioni pubblicate da meno di 7 giorni
+  # (le versioni compromesse vengono di solito ritirate entro poche ore). Gli aggiornamenti di
+  # sicurezza non sono soggetti al cooldown.
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 7
+    groups:
+      dipendenze:
+        patterns: ['*']
+        update-types: [minor, patch]
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 7

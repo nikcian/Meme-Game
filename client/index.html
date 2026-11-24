@@ -1,13 +1,27 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meme Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Meme Game — abbina la didascalia giusta</title>
+    <meta
+      name="description"
+      content="Un meme, sette didascalie, trenta secondi: solo due sono quelle giuste. Gioca, scala la classifica e scopri il tuo meme preferito."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#fff6e5" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#13101b" media="(prefers-color-scheme: dark)" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Meme Game" />
+    <meta property="og:description" content="Abbina la didascalia giusta al meme prima che scada il tempo." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <!-- Applica il tema prima del primo paint (niente lampeggio chiaro/scuro). File esterno: compatibile con la CSP. -->
+    <script src="/theme-init.js"></script>
   </head>
   <body>
     <div id="root"></div>
+    <noscript>Per giocare a Meme Game è necessario abilitare JavaScript.</noscript>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

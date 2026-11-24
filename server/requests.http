@@ -1,0 +1,57 @@
+# Richieste di esempio per l'estensione REST Client di VS Code (o qualsiasi client .http).
+# Avvia prima il server con `npm run dev`. I cookie di sessione vengono conservati tra una richiesta e l'altra.
+@api = http://localhost:3001/api
+
+### Stato del servizio
+GET {{api}}/health
+
+### Utente corrente (user: null se non hai effettuato l'accesso)
+GET {{api}}/session
+
+### Accesso con l'account demo
+POST {{api}}/session
+Content-Type: application/json
+
+{ "username": "user", "password": "testpass" }
+
+### Registrazione (effettua anche l'accesso)
+POST {{api}}/users
+Content-Type: application/json
+
+{ "username": "nuovo_utente", "name": "Nuovo Utente", "password": "una-password-lunga" }
+
+### Nuova partita (3 round se hai effettuato l'accesso, 1 round altrimenti)
+POST {{api}}/game
+
+### Partita in corso
+GET {{api}}/game
+
+### Risposta al round 1 (captionId: null = tempo scaduto)
+POST {{api}}/game/answer
+Content-Type: application/json
+
+{ "round": 1, "captionId": 1 }
+
+### Round successivo
+POST {{api}}/game/next
+Content-Type: application/json
+
+{ "round": 2 }
+
+### Abbandona la partita
+DELETE {{api}}/game
+
+### Storico (paginato)
+GET {{api}}/history?limit=10&offset=0
+
+### Statistiche personali
+GET {{api}}/history/stats
+
+### Dettaglio di una partita (solo se è tua)
+GET {{api}}/history/1
+
+### Classifica
+GET {{api}}/leaderboard
+
+### Logout
+DELETE {{api}}/session

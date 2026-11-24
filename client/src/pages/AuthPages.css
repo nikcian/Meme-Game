@@ -1,0 +1,116 @@
+.auth {
+  display: grid;
+  place-items: start center;
+}
+
+.auth__card {
+  display: grid;
+  gap: 1.5rem;
+  width: min(100%, 470px);
+  padding: clamp(1.5rem, 5vw, 2.4rem);
+  animation: rise var(--dur-slow) var(--ease-out);
+}
+
+.auth__head {
+  display: grid;
+  justify-items: center;
+  gap: 0.6rem;
+  text-align: center;
+}
+
+.auth__head .logo-mark {
+  rotate: -6deg;
+  margin-bottom: 0.25rem;
+}
+
+.auth__title {
+  font-size: clamp(1.9rem, 5vw, 2.4rem);
+}
+
+.auth__lead {
+  color: var(--text-2);
+}
+
+.auth__form {
+  display: grid;
+  gap: 1.1rem;
+}
+
+.auth__form .btn--block {
+  margin-top: 0.4rem;
+}
+
+.auth__demo {
+  display: grid;
+  gap: 0.75rem;
+  justify-items: start;
+  padding: 1rem 1.1rem;
+  background: var(--surface-2);
+  border: var(--bw-sm) dashed var(--line);
+  border-radius: var(--r);
+  font-size: 0.95rem;
+}
+
+.auth__demo p {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.auth__demo svg {
+  flex: none;
+  margin-top: 0.15rem;
+  color: var(--violet);
+}
+
+.auth__switch {
+  text-align: center;
+  color: var(--text-2);
+}
+
+.auth__switch a {
+  font-weight: 800;
+  color: var(--text);
+}
+
+/* Robustezza della password */
+
+.strength {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.85rem;
+  color: var(--text-3);
+}
+
+.strength__bars {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+  width: 112px;
+  flex: none;
+}
+
+.strength__bars span {
+  height: 7px;
+  border-radius: 4px;
+  background: var(--surface-3);
+  border: 1.5px solid var(--hairline);
+  transition: background-color var(--dur);
+}
+
+.strength[data-level='1'] .is-on {
+  background: var(--red);
+}
+
+.strength[data-level='2'] .is-on {
+  background: var(--orange);
+}
+
+.strength[data-level='3'] .is-on {
+  background: var(--cyan);
+}
+
+.strength[data-level='4'] .is-on {
+  background: var(--green);
+}
